@@ -1,0 +1,10 @@
+"""Project custom settings."""
+SECRET_KEY = 'your secret site key'
+MAIL_SERVER = 'smtp.email.com'
+MAIL_PORT = '587'
+EMAIL_FROM = 'mail@mail.com'
+MAIL_USERNAME = 'mail@mail.com'
+MAIL_PASSWORD = ''
+MAIL_USE_TLS = True
+MAIL_NO_REPLY = 'mail@mail.com'
+MAIL_DEFAULT_SENDER = ''

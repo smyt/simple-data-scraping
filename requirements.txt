@@ -1,0 +1,10 @@
+flask==0.12.2
+lxml==3.7.3
+scrapy==1.4.0
+WTForms==2.1
+Flask-RQ==0.2
+rq==0.10.0
+Flask-Mail==0.9.1
+Flask-WTF==0.14.2
+Fabric3==1.14.post1
+w3lib==1.19.0

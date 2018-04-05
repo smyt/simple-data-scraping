@@ -1,0 +1,10 @@
+.idea
+*.pyc
+.DS_Store
+.cache/
+*.log
+/htmlcov/
+.coverage
+*.csv
+app/settings/config_local.py
+conf/

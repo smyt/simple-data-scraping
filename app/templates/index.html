@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>viz_parser</title>
+    <style>
+        .p-url input{
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:50%;margin: 100px auto 0;">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        {% endwith %}
+        <hr>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <p>
+                Please enter url of category from
+                <a href="http://yell.ru">yell.ru</a>
+                to parse
+            </p>
+            <p class="p-url">
+                Enter URL here: {{ form.url }}
+                {% for error in form.url.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>
+                Url example: https://www.yell.ru/spb/top/restorany/
+            </p>
+            <p>
+                {{ form.type_parsing.label }}:
+                {{ form.type_parsing }}
+            </p>
+            <p>
+                E-mail for receive results: {{ form.email }}
+                {% for error in form.email.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+
+            </p>
+            <p>
+                <input type="submit" value="Start" />
+            </p>
+            <p style="color: red;">
+                {{ error }}
+            </p>
+        </form>
+    </div>
+</body>
+</html>
